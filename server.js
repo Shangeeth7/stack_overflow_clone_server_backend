@@ -16,6 +16,12 @@ app.use(express.json());
 
 app.use("/api", router);
 
+app.get("/", (req, res) =>
+  res.send(` 
+Backend Server of Stackoverflow
+`)
+);
+
 app.use(cors());
 
 app.listen(PORT, () => {
